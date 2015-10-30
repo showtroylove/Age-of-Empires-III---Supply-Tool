@@ -1,0 +1,111 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AOEClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WoodTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;censored&gt;</Value>
+    </Setting>
+    <Setting Name="FoodTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">medium rare please</Value>
+    </Setting>
+    <Setting Name="GoldTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">give me liberty or give me coin</Value>
+    </Setting>
+    <Setting Name="XPTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">nova &amp; orion</Value>
+    </Setting>
+    <Setting Name="DestroyBoatsTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">shiver me timpers!</Value>
+    </Setting>
+    <Setting Name="RevealMapTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">x marks the spot</Value>
+    </Setting>
+    <Setting Name="WinGameTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">this is too hard</Value>
+    </Setting>
+    <Setting Name="MusketeeredTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sooo good</Value>
+    </Setting>
+    <Setting Name="GeorgeCrushingtonToolTip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">George Crushington</Value>
+    </Setting>
+    <Setting Name="GeorgeCrushington" Type="System.String" Scope="User">
+      <Value Profile="(Default)">where's that axe?</Value>
+    </Setting>
+    <Setting Name="BigGun" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ya gotta make do with what ya got</Value>
+    </Setting>
+    <Setting Name="BigGunToolTip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Spawns Mediocre Bombard at Home City gather point</Value>
+    </Setting>
+    <Setting Name="MonsterTruck" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tuck tuck tuck</Value>
+    </Setting>
+    <Setting Name="MonsterTruckToolTip" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Spawn The Tommynator (big red monster truck) at Home City gather point</Value>
+    </Setting>
+    <Setting Name="CustomItem1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ya gotta make do with what ya got</Value>
+    </Setting>
+    <Setting Name="WindowTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Age of Empires III</Value>
+    </Setting>
+    <Setting Name="BuildRateTag" Type="System.String" Scope="User">
+      <Value Profile="(Default)">speed always wins</Value>
+    </Setting>
+    <Setting Name="CustomItem1ToolTip" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FlattenAnimals" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A recent study indicated that 100% of herdables are obese</Value>
+    </Setting>
+    <Setting Name="CustomItem2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tuck tuck tuck</Value>
+    </Setting>
+    <Setting Name="CustomItem2Tooltip" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomItem3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Where's that axe?</Value>
+    </Setting>
+    <Setting Name="CustomItem3ToolTip" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomItem4" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomItem4Tooltip" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Exports" Type="System.String" Scope="User">
+      <Value Profile="(Default)">a whole lot of love</Value>
+    </Setting>
+    <Setting Name="SuppliesAmt" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="XPAmt" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="Custom1Amt" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="Custom2Amt" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="Custom3Amt" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="Custom4Amt" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="UnImportantSections" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Destroy all Enemy Boats,Musketeered,Instant Victory,Custom2,Custom3,Custom4</Value>
+    </Setting>
+    <Setting Name="WindowTitleComboIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DelayedSendTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
