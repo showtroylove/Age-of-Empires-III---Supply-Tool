@@ -66,21 +66,35 @@ namespace AOEClient
 
         private void btnUnselectOneClicks_Click(object sender, EventArgs e)
         {
+            UnSelectAll();
+        }
+
+        private void UnSelectAll()
+        {
             foreach (CheckBox cb in Controls.OfType<GroupBox>().SelectMany(grp => grp.Controls.OfType<CheckBox>().Where(ctl => ctl.Checked && !ctl.Text.StartsWith("Apply"))))
                 cb.CheckState = CheckState.Unchecked;
         }
 
         private void btnSelectImpOneClicks_Click(object sender, EventArgs e)
         {
+            SelectImportant();
+        }
+
+        private void SelectImportant()
+        {
+            UnSelectAll();
             foreach (CheckBox cb in Controls.OfType<GroupBox>().SelectMany(grp => grp.Controls.OfType<CheckBox>().Where(ctl => !ctl.Checked && !_unimportantSelections.Contains(ctl.Text) && !ctl.Text.StartsWith("Apply"))))
                 cb.CheckState = CheckState.Checked;
         }
 
         private void CheatForm_Load(object sender, EventArgs e)
         {
+            var unimpselections = Properties.Settings.Default.UnImportantSections;
             cboWindowTitle.SelectedIndex = Properties.Settings.Default.WindowTitleComboIndex;
-            _unimportantSelections = Properties.Settings.Default.UnImportantSections.Split(',').ToList();
+            _unimportantSelections = unimpselections.Split(',').ToList();
             GetValidGameHandle();
+            SelectImportant();
+            toolTip1.SetToolTip(btnSelectImpOneClicks, $"Excluded: { unimpselections }");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

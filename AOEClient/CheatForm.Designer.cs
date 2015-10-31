@@ -31,28 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheatForm));
             this.grpOneTime = new System.Windows.Forms.GroupBox();
+            this.chkFocusLost = new System.Windows.Forms.CheckBox();
+            this.cboWindowTitle = new System.Windows.Forms.ComboBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.chkRevealMap = new System.Windows.Forms.CheckBox();
             this.btnSelectImpOneClicks = new System.Windows.Forms.Button();
             this.btnUnselectOneClicks = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
             this.grpSupplies = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.grpMisc = new System.Windows.Forms.GroupBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.chkFocusLost = new System.Windows.Forms.CheckBox();
-            this.cboCustom3 = new System.Windows.Forms.ComboBox();
-            this.cboCustom2 = new System.Windows.Forms.ComboBox();
-            this.cboCustom1 = new System.Windows.Forms.ComboBox();
-            this.cboCustom0 = new System.Windows.Forms.ComboBox();
-            this.numCustom3 = new System.Windows.Forms.NumericUpDown();
-            this.numCustom2 = new System.Windows.Forms.NumericUpDown();
-            this.numCustom1 = new System.Windows.Forms.NumericUpDown();
-            this.numCustom0 = new System.Windows.Forms.NumericUpDown();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.numSupplyAmt = new System.Windows.Forms.NumericUpDown();
             this.numXPAmt = new System.Windows.Forms.NumericUpDown();
@@ -60,23 +52,31 @@
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.cboWindowTitle = new System.Windows.Forms.ComboBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.chkRevealMap = new System.Windows.Forms.CheckBox();
+            this.grpMisc = new System.Windows.Forms.GroupBox();
+            this.cboCustom3 = new System.Windows.Forms.ComboBox();
+            this.cboCustom2 = new System.Windows.Forms.ComboBox();
+            this.cboCustom1 = new System.Windows.Forms.ComboBox();
+            this.cboCustom0 = new System.Windows.Forms.ComboBox();
+            this.numCustom3 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.numCustom2 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.numCustom1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.numCustom0 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.cheatCodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.grpOneTime.SuspendLayout();
             this.grpSupplies.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSupplyAmt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numXPAmt)).BeginInit();
             this.grpMisc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSupplyAmt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numXPAmt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheatCodeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +99,38 @@
             this.grpOneTime.TabStop = false;
             this.grpOneTime.Text = "One Time Cheats";
             // 
+            // chkFocusLost
+            // 
+            this.chkFocusLost.AutoSize = true;
+            this.chkFocusLost.Location = new System.Drawing.Point(226, 18);
+            this.chkFocusLost.Name = "chkFocusLost";
+            this.chkFocusLost.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chkFocusLost.Size = new System.Drawing.Size(139, 17);
+            this.chkFocusLost.TabIndex = 9;
+            this.chkFocusLost.Text = "Apply When Focus Lost";
+            this.toolTip1.SetToolTip(this.chkFocusLost, "Only begin sending codes when this forms focus is lost. \r\nPressing apply will not" +
+        " begin until focus is lost.");
+            this.chkFocusLost.UseVisualStyleBackColor = true;
+            // 
+            // cboWindowTitle
+            // 
+            this.cboWindowTitle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cboWindowTitle.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "WindowTitle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cboWindowTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboWindowTitle.FormattingEnabled = true;
+            this.cboWindowTitle.Items.AddRange(new object[] {
+            "Age of Empires III",
+            "Age of Empires III - The Asian Dynasties",
+            "Age of Empires III - The War Chiefs",
+            "Age of Empires 3",
+            "Age of Empires 3 - The Asian Dynasties",
+            "Age of Empires 3 - The War Chiefs"});
+            this.cboWindowTitle.Location = new System.Drawing.Point(14, 47);
+            this.cboWindowTitle.Name = "cboWindowTitle";
+            this.cboWindowTitle.Size = new System.Drawing.Size(350, 21);
+            this.cboWindowTitle.TabIndex = 0;
+            this.cboWindowTitle.Text = global::AOEClient.Properties.Settings.Default.WindowTitle;
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -109,6 +141,97 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Game Window Title: (click to use default)";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "BuildRateTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox6.Location = new System.Drawing.Point(236, 84);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox6.Size = new System.Drawing.Size(128, 17);
+            this.checkBox6.TabIndex = 2;
+            this.checkBox6.Tag = global::AOEClient.Properties.Settings.Default.BuildRateTag;
+            this.checkBox6.Text = "Build / Gather Quickly";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "MusketeeredTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox5.Location = new System.Drawing.Point(278, 151);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox5.Size = new System.Drawing.Size(86, 17);
+            this.checkBox5.TabIndex = 6;
+            this.checkBox5.Tag = global::AOEClient.Properties.Settings.Default.MusketeeredTag;
+            this.checkBox5.Text = "Musketeered";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "WinGameTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox4.Location = new System.Drawing.Point(14, 151);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(91, 17);
+            this.checkBox4.TabIndex = 5;
+            this.checkBox4.Tag = global::AOEClient.Properties.Settings.Default.WinGameTag;
+            this.checkBox4.Text = "Instant Victory";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "DestroyBoatsTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox3.Location = new System.Drawing.Point(226, 117);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox3.Size = new System.Drawing.Size(138, 17);
+            this.checkBox3.TabIndex = 4;
+            this.checkBox3.Tag = global::AOEClient.Properties.Settings.Default.DestroyBoatsTag;
+            this.checkBox3.Text = "Destroy all Enemy Boats";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "FlattenAnimals", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox2.Location = new System.Drawing.Point(14, 117);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(89, 17);
+            this.checkBox2.TabIndex = 3;
+            this.checkBox2.Tag = global::AOEClient.Properties.Settings.Default.FlattenAnimals;
+            this.checkBox2.Text = "Kill all Animals";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // chkRevealMap
+            // 
+            this.chkRevealMap.AutoSize = true;
+            this.chkRevealMap.Checked = true;
+            this.chkRevealMap.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkRevealMap.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "RevealMapTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.chkRevealMap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chkRevealMap.Location = new System.Drawing.Point(14, 84);
+            this.chkRevealMap.Name = "chkRevealMap";
+            this.chkRevealMap.Size = new System.Drawing.Size(82, 17);
+            this.chkRevealMap.TabIndex = 1;
+            this.chkRevealMap.Tag = global::AOEClient.Properties.Settings.Default.RevealMapTag;
+            this.chkRevealMap.Text = "Reveal Map";
+            this.chkRevealMap.UseVisualStyleBackColor = true;
             // 
             // btnSelectImpOneClicks
             // 
@@ -174,238 +297,11 @@
             // groupBox4
             // 
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox4.Location = new System.Drawing.Point(14, 48);
+            this.groupBox4.Location = new System.Drawing.Point(22, 48);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(352, 8);
+            this.groupBox4.Size = new System.Drawing.Size(344, 8);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
-            // 
-            // grpMisc
-            // 
-            this.grpMisc.Controls.Add(this.cboCustom3);
-            this.grpMisc.Controls.Add(this.cboCustom2);
-            this.grpMisc.Controls.Add(this.cboCustom1);
-            this.grpMisc.Controls.Add(this.cboCustom0);
-            this.grpMisc.Controls.Add(this.numCustom3);
-            this.grpMisc.Controls.Add(this.checkBox12);
-            this.grpMisc.Controls.Add(this.numCustom2);
-            this.grpMisc.Controls.Add(this.checkBox11);
-            this.grpMisc.Controls.Add(this.numCustom1);
-            this.grpMisc.Controls.Add(this.checkBox10);
-            this.grpMisc.Controls.Add(this.numCustom0);
-            this.grpMisc.Controls.Add(this.checkBox13);
-            this.grpMisc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.grpMisc.Location = new System.Drawing.Point(12, 305);
-            this.grpMisc.Name = "grpMisc";
-            this.grpMisc.Size = new System.Drawing.Size(377, 157);
-            this.grpMisc.TabIndex = 3;
-            this.grpMisc.TabStop = false;
-            this.grpMisc.Text = "Miscellaneous";
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox12.Location = new System.Drawing.Point(15, 121);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(65, 17);
-            this.checkBox12.TabIndex = 10;
-            this.checkBox12.Tag = "cboCustom3";
-            this.checkBox12.Text = "Custom4";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox11.Location = new System.Drawing.Point(14, 89);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(65, 17);
-            this.checkBox11.TabIndex = 7;
-            this.checkBox11.Tag = "cboCustom2";
-            this.checkBox11.Text = "Custom3";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox10.Location = new System.Drawing.Point(15, 57);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(65, 17);
-            this.checkBox10.TabIndex = 4;
-            this.checkBox10.Tag = "cboCustom1";
-            this.checkBox10.Text = "Custom2";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Checked = true;
-            this.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox13.Location = new System.Drawing.Point(14, 25);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(65, 17);
-            this.checkBox13.TabIndex = 1;
-            this.checkBox13.Tag = "cboCustom0";
-            this.checkBox13.Text = "Custom1";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.linkLabel2.Location = new System.Drawing.Point(245, 486);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(28, 13);
-            this.linkLabel2.TabIndex = 6;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Test";
-            this.toolTip1.SetToolTip(this.linkLabel2, "Click to test if you can find the game window.");
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.IsBalloon = true;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Supply Tool";
-            // 
-            // chkFocusLost
-            // 
-            this.chkFocusLost.AutoSize = true;
-            this.chkFocusLost.Checked = true;
-            this.chkFocusLost.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFocusLost.Location = new System.Drawing.Point(226, 18);
-            this.chkFocusLost.Name = "chkFocusLost";
-            this.chkFocusLost.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chkFocusLost.Size = new System.Drawing.Size(139, 17);
-            this.chkFocusLost.TabIndex = 9;
-            this.chkFocusLost.Text = "Apply When Focus Lost";
-            this.toolTip1.SetToolTip(this.chkFocusLost, "Only begin sending codes when this forms focus is lost. \r\nPressing apply will not" +
-        " begin until focus is lost.");
-            this.chkFocusLost.UseVisualStyleBackColor = true;
-            // 
-            // cboCustom3
-            // 
-            this.cboCustom3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboCustom3.FormattingEnabled = true;
-            this.cboCustom3.Items.AddRange(new object[] {
-            "Ya gotta make do with what ya got",
-            "tuck tuck tuck",
-            "Where\'s that axe?"});
-            this.cboCustom3.Location = new System.Drawing.Point(79, 120);
-            this.cboCustom3.Name = "cboCustom3";
-            this.cboCustom3.Size = new System.Drawing.Size(239, 21);
-            this.cboCustom3.TabIndex = 11;
-            this.cboCustom3.Tag = "numCustom3";
-            this.cboCustom3.Text = global::AOEClient.Properties.Settings.Default.CustomItem4;
-            // 
-            // cboCustom2
-            // 
-            this.cboCustom2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboCustom2.FormattingEnabled = true;
-            this.cboCustom2.Items.AddRange(new object[] {
-            "Ya gotta make do with what ya got",
-            "tuck tuck tuck",
-            "Where\'s that axe?"});
-            this.cboCustom2.Location = new System.Drawing.Point(79, 88);
-            this.cboCustom2.Name = "cboCustom2";
-            this.cboCustom2.Size = new System.Drawing.Size(239, 21);
-            this.cboCustom2.TabIndex = 8;
-            this.cboCustom2.Tag = "numCustom2";
-            this.cboCustom2.Text = global::AOEClient.Properties.Settings.Default.CustomItem3;
-            // 
-            // cboCustom1
-            // 
-            this.cboCustom1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboCustom1.FormattingEnabled = true;
-            this.cboCustom1.Items.AddRange(new object[] {
-            "Ya gotta make do with what ya got",
-            "tuck tuck tuck",
-            "Where\'s that axe?"});
-            this.cboCustom1.Location = new System.Drawing.Point(79, 56);
-            this.cboCustom1.Name = "cboCustom1";
-            this.cboCustom1.Size = new System.Drawing.Size(239, 21);
-            this.cboCustom1.TabIndex = 5;
-            this.cboCustom1.Tag = "numCustom1";
-            this.cboCustom1.Text = global::AOEClient.Properties.Settings.Default.CustomItem2;
-            // 
-            // cboCustom0
-            // 
-            this.cboCustom0.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboCustom0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboCustom0.FormattingEnabled = true;
-            this.cboCustom0.Items.AddRange(new object[] {
-            "Ya gotta make do with what ya got",
-            "tuck tuck tuck",
-            "Where\'s that axe?",
-            ""});
-            this.cboCustom0.Location = new System.Drawing.Point(79, 24);
-            this.cboCustom0.Name = "cboCustom0";
-            this.cboCustom0.Size = new System.Drawing.Size(238, 21);
-            this.cboCustom0.TabIndex = 2;
-            this.cboCustom0.Tag = "numCustom0";
-            this.cboCustom0.Text = global::AOEClient.Properties.Settings.Default.CustomItem1;
-            // 
-            // numCustom3
-            // 
-            this.numCustom3.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom4Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.numCustom3.Location = new System.Drawing.Point(323, 121);
-            this.numCustom3.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numCustom3.Name = "numCustom3";
-            this.numCustom3.Size = new System.Drawing.Size(43, 20);
-            this.numCustom3.TabIndex = 0;
-            this.numCustom3.Value = global::AOEClient.Properties.Settings.Default.Custom4Amt;
-            // 
-            // numCustom2
-            // 
-            this.numCustom2.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom3Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.numCustom2.Location = new System.Drawing.Point(323, 89);
-            this.numCustom2.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numCustom2.Name = "numCustom2";
-            this.numCustom2.Size = new System.Drawing.Size(43, 20);
-            this.numCustom2.TabIndex = 9;
-            this.numCustom2.Value = global::AOEClient.Properties.Settings.Default.Custom3Amt;
-            // 
-            // numCustom1
-            // 
-            this.numCustom1.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom2Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.numCustom1.Location = new System.Drawing.Point(324, 57);
-            this.numCustom1.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numCustom1.Name = "numCustom1";
-            this.numCustom1.Size = new System.Drawing.Size(43, 20);
-            this.numCustom1.TabIndex = 6;
-            this.numCustom1.Value = global::AOEClient.Properties.Settings.Default.Custom2Amt;
-            // 
-            // numCustom0
-            // 
-            this.numCustom0.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom1Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.numCustom0.Location = new System.Drawing.Point(323, 25);
-            this.numCustom0.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numCustom0.Name = "numCustom0";
-            this.numCustom0.Size = new System.Drawing.Size(43, 20);
-            this.numCustom0.TabIndex = 3;
-            this.numCustom0.Value = global::AOEClient.Properties.Settings.Default.Custom1Amt;
             // 
             // checkBox14
             // 
@@ -520,115 +416,217 @@
             this.checkBox1.Text = "Coin";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // cboWindowTitle
+            // grpMisc
             // 
-            this.cboWindowTitle.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cboWindowTitle.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "WindowTitle", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.cboWindowTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cboWindowTitle.FormattingEnabled = true;
-            this.cboWindowTitle.Items.AddRange(new object[] {
-            "Age of Empires III",
-            "Age of Empires III - The Asian Dynasties",
-            "Age of Empires III - The War Chiefs",
-            "Age of Empires 3",
-            "Age of Empires 3 - The Asian Dynasties",
-            "Age of Empires 3 - The War Chiefs"});
-            this.cboWindowTitle.Location = new System.Drawing.Point(14, 47);
-            this.cboWindowTitle.Name = "cboWindowTitle";
-            this.cboWindowTitle.Size = new System.Drawing.Size(350, 21);
-            this.cboWindowTitle.TabIndex = 0;
-            this.cboWindowTitle.Text = global::AOEClient.Properties.Settings.Default.WindowTitle;
+            this.grpMisc.Controls.Add(this.cboCustom3);
+            this.grpMisc.Controls.Add(this.cboCustom2);
+            this.grpMisc.Controls.Add(this.cboCustom1);
+            this.grpMisc.Controls.Add(this.cboCustom0);
+            this.grpMisc.Controls.Add(this.numCustom3);
+            this.grpMisc.Controls.Add(this.checkBox12);
+            this.grpMisc.Controls.Add(this.numCustom2);
+            this.grpMisc.Controls.Add(this.checkBox11);
+            this.grpMisc.Controls.Add(this.numCustom1);
+            this.grpMisc.Controls.Add(this.checkBox10);
+            this.grpMisc.Controls.Add(this.numCustom0);
+            this.grpMisc.Controls.Add(this.checkBox13);
+            this.grpMisc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.grpMisc.Location = new System.Drawing.Point(12, 305);
+            this.grpMisc.Name = "grpMisc";
+            this.grpMisc.Size = new System.Drawing.Size(377, 157);
+            this.grpMisc.TabIndex = 3;
+            this.grpMisc.TabStop = false;
+            this.grpMisc.Text = "Miscellaneous";
             // 
-            // checkBox6
+            // cboCustom3
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "BuildRateTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox6.Location = new System.Drawing.Point(236, 84);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox6.Size = new System.Drawing.Size(128, 17);
-            this.checkBox6.TabIndex = 2;
-            this.checkBox6.Tag = global::AOEClient.Properties.Settings.Default.BuildRateTag;
-            this.checkBox6.Text = "Build / Gather Quickly";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cboCustom3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cboCustom3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCustom3.FormattingEnabled = true;
+            this.cboCustom3.Items.AddRange(new object[] {
+            "Ya gotta make do with what ya got",
+            "tuck tuck tuck",
+            "Where\'s that axe?"});
+            this.cboCustom3.Location = new System.Drawing.Point(79, 120);
+            this.cboCustom3.Name = "cboCustom3";
+            this.cboCustom3.Size = new System.Drawing.Size(239, 21);
+            this.cboCustom3.TabIndex = 11;
+            this.cboCustom3.Tag = "numCustom3";
+            this.cboCustom3.Text = global::AOEClient.Properties.Settings.Default.CustomItem4;
             // 
-            // checkBox5
+            // cboCustom2
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "MusketeeredTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox5.Location = new System.Drawing.Point(278, 151);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox5.Size = new System.Drawing.Size(86, 17);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.Tag = global::AOEClient.Properties.Settings.Default.MusketeeredTag;
-            this.checkBox5.Text = "Musketeered";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cboCustom2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cboCustom2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCustom2.FormattingEnabled = true;
+            this.cboCustom2.Items.AddRange(new object[] {
+            "Ya gotta make do with what ya got",
+            "tuck tuck tuck",
+            "Where\'s that axe?"});
+            this.cboCustom2.Location = new System.Drawing.Point(79, 88);
+            this.cboCustom2.Name = "cboCustom2";
+            this.cboCustom2.Size = new System.Drawing.Size(239, 21);
+            this.cboCustom2.TabIndex = 8;
+            this.cboCustom2.Tag = "numCustom2";
+            this.cboCustom2.Text = global::AOEClient.Properties.Settings.Default.CustomItem3;
             // 
-            // checkBox4
+            // cboCustom1
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "WinGameTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox4.Location = new System.Drawing.Point(14, 151);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(91, 17);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Tag = global::AOEClient.Properties.Settings.Default.WinGameTag;
-            this.checkBox4.Text = "Instant Victory";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cboCustom1.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cboCustom1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCustom1.FormattingEnabled = true;
+            this.cboCustom1.Items.AddRange(new object[] {
+            "Ya gotta make do with what ya got",
+            "tuck tuck tuck",
+            "Where\'s that axe?"});
+            this.cboCustom1.Location = new System.Drawing.Point(79, 56);
+            this.cboCustom1.Name = "cboCustom1";
+            this.cboCustom1.Size = new System.Drawing.Size(239, 21);
+            this.cboCustom1.TabIndex = 5;
+            this.cboCustom1.Tag = "numCustom1";
+            this.cboCustom1.Text = global::AOEClient.Properties.Settings.Default.CustomItem2;
             // 
-            // checkBox3
+            // cboCustom0
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "DestroyBoatsTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox3.Location = new System.Drawing.Point(226, 117);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox3.Size = new System.Drawing.Size(138, 17);
-            this.checkBox3.TabIndex = 4;
-            this.checkBox3.Tag = global::AOEClient.Properties.Settings.Default.DestroyBoatsTag;
-            this.checkBox3.Text = "Destroy all Enemy Boats";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cboCustom0.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::AOEClient.Properties.Settings.Default, "CustomItem1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.cboCustom0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cboCustom0.FormattingEnabled = true;
+            this.cboCustom0.Items.AddRange(new object[] {
+            "Ya gotta make do with what ya got",
+            "tuck tuck tuck",
+            "Where\'s that axe?",
+            ""});
+            this.cboCustom0.Location = new System.Drawing.Point(79, 24);
+            this.cboCustom0.Name = "cboCustom0";
+            this.cboCustom0.Size = new System.Drawing.Size(238, 21);
+            this.cboCustom0.TabIndex = 2;
+            this.cboCustom0.Tag = "numCustom0";
+            this.cboCustom0.Text = global::AOEClient.Properties.Settings.Default.CustomItem1;
             // 
-            // checkBox2
+            // numCustom3
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "FlattenAnimals", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBox2.Location = new System.Drawing.Point(14, 117);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(89, 17);
-            this.checkBox2.TabIndex = 3;
-            this.checkBox2.Tag = global::AOEClient.Properties.Settings.Default.FlattenAnimals;
-            this.checkBox2.Text = "Kill all Animals";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.numCustom3.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom4Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.numCustom3.Location = new System.Drawing.Point(323, 121);
+            this.numCustom3.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numCustom3.Name = "numCustom3";
+            this.numCustom3.Size = new System.Drawing.Size(43, 20);
+            this.numCustom3.TabIndex = 0;
+            this.numCustom3.Value = global::AOEClient.Properties.Settings.Default.Custom4Amt;
             // 
-            // chkRevealMap
+            // checkBox12
             // 
-            this.chkRevealMap.AutoSize = true;
-            this.chkRevealMap.Checked = true;
-            this.chkRevealMap.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkRevealMap.DataBindings.Add(new System.Windows.Forms.Binding("Tag", global::AOEClient.Properties.Settings.Default, "RevealMapTag", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.chkRevealMap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.chkRevealMap.Location = new System.Drawing.Point(14, 84);
-            this.chkRevealMap.Name = "chkRevealMap";
-            this.chkRevealMap.Size = new System.Drawing.Size(82, 17);
-            this.chkRevealMap.TabIndex = 1;
-            this.chkRevealMap.Tag = global::AOEClient.Properties.Settings.Default.RevealMapTag;
-            this.chkRevealMap.Text = "Reveal Map";
-            this.chkRevealMap.UseVisualStyleBackColor = true;
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox12.Location = new System.Drawing.Point(15, 121);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(65, 17);
+            this.checkBox12.TabIndex = 10;
+            this.checkBox12.Tag = "cboCustom3";
+            this.checkBox12.Text = "Custom4";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // numCustom2
+            // 
+            this.numCustom2.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom3Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.numCustom2.Location = new System.Drawing.Point(323, 89);
+            this.numCustom2.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numCustom2.Name = "numCustom2";
+            this.numCustom2.Size = new System.Drawing.Size(43, 20);
+            this.numCustom2.TabIndex = 9;
+            this.numCustom2.Value = global::AOEClient.Properties.Settings.Default.Custom3Amt;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox11.Location = new System.Drawing.Point(14, 89);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(65, 17);
+            this.checkBox11.TabIndex = 7;
+            this.checkBox11.Tag = "cboCustom2";
+            this.checkBox11.Text = "Custom3";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // numCustom1
+            // 
+            this.numCustom1.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom2Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.numCustom1.Location = new System.Drawing.Point(324, 57);
+            this.numCustom1.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numCustom1.Name = "numCustom1";
+            this.numCustom1.Size = new System.Drawing.Size(43, 20);
+            this.numCustom1.TabIndex = 6;
+            this.numCustom1.Value = global::AOEClient.Properties.Settings.Default.Custom2Amt;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox10.Location = new System.Drawing.Point(15, 57);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(65, 17);
+            this.checkBox10.TabIndex = 4;
+            this.checkBox10.Tag = "cboCustom1";
+            this.checkBox10.Text = "Custom2";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // numCustom0
+            // 
+            this.numCustom0.DataBindings.Add(new System.Windows.Forms.Binding("Value", global::AOEClient.Properties.Settings.Default, "Custom1Amt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.numCustom0.Location = new System.Drawing.Point(323, 25);
+            this.numCustom0.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numCustom0.Name = "numCustom0";
+            this.numCustom0.Size = new System.Drawing.Size(43, 20);
+            this.numCustom0.TabIndex = 3;
+            this.numCustom0.Value = global::AOEClient.Properties.Settings.Default.Custom1Amt;
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Checked = true;
+            this.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox13.Location = new System.Drawing.Point(14, 25);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(65, 17);
+            this.checkBox13.TabIndex = 1;
+            this.checkBox13.Tag = "cboCustom0";
+            this.checkBox13.Text = "Custom1";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.linkLabel2.Location = new System.Drawing.Point(245, 480);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(28, 13);
+            this.linkLabel2.TabIndex = 6;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Test";
+            this.toolTip1.SetToolTip(this.linkLabel2, "Click to test if you can find the game window.");
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Supply Tool";
             // 
             // cheatCodeBindingSource
             // 
@@ -659,14 +657,14 @@
             this.grpOneTime.PerformLayout();
             this.grpSupplies.ResumeLayout(false);
             this.grpSupplies.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSupplyAmt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numXPAmt)).EndInit();
             this.grpMisc.ResumeLayout(false);
             this.grpMisc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCustom0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSupplyAmt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numXPAmt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheatCodeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

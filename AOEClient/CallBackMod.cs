@@ -9,13 +9,13 @@ using WindowsInput.Native;
 
 namespace AOEClient
 {
-
     public delegate bool EnumWindowsProc(IntPtr hwnd, string lParam);
     public delegate bool IsWindowVisible(IntPtr hWnd);  
 
     // ERROR: Not supported in C#: OptionDeclaration
     public static class CallBackMod
     {
+        #region WIN32 Imports
         static IntPtr? AgeEmpireApplication { get; set; }
 
         public static string GameWindowTitle { get; set; }
@@ -23,18 +23,27 @@ namespace AOEClient
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         static extern int EnumWindows(EnumWindowsProc lpEnumFunc, [MarshalAs(UnmanagedType.AnsiBStr)]  string lparam);
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]        
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         static extern bool IsWindowVisible(IntPtr hWnd);
 
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
-        static extern int GetWindowTextLength(IntPtr hWnd); 
+        static extern int GetWindowTextLength(IntPtr hWnd);
 
         [DllImport("user32.dll", EntryPoint = "GetWindowText", CharSet = CharSet.Auto, SetLastError = true)]
         static extern int GetWindowText(IntPtr hwnd, string lpString, int cch);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        static extern int ShowWindow(IntPtr hwnd, int nCmdShow);
- 
+        static extern bool ShowWindow(IntPtr hwnd, int nCmdShow);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        internal static extern bool SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
+        static int WM_SYSCOMMAND = 0x0112;
+        static int SC_RESTORE = 0xF120; 
+        #endregion
+
         static bool EnumWindowsProc(IntPtr hwnd, string winTitle)
         {
             // Return True to continue enumerating windows.
@@ -65,7 +74,6 @@ namespace AOEClient
                 return true;
 
             AgeEmpireApplication = hwnd;
-            
             return false;           
         }
 
@@ -80,10 +88,18 @@ namespace AOEClient
                 EnumWindows(EnumWindowsProc, title);
             }
 
-            if (bShowWindowTest & AgeEmpireApplication.HasValue)
-                ShowWindow(AgeEmpireApplication.Value, 5);
+            if (!(bShowWindowTest & AgeEmpireApplication.HasValue))
+                return AgeEmpireApplication.HasValue;
+            
+            return ShowWindow(AgeEmpireApplication.Value);
+        }
 
-            return AgeEmpireApplication.HasValue;
+        static bool ShowWindow(IntPtr hwnd)
+        {
+            return (SetForegroundWindow(hwnd) || 
+                    ShowWindow(hwnd, 1)       ||
+                    ShowWindow(hwnd, 5)       ||
+                    ShowWindow(hwnd, 10))     || SendMessage(hwnd, WM_SYSCOMMAND, SC_RESTORE, 0);
         }
 
         public static bool SubmitGameCheatCode(IList<CheatCode> supplyItem)
@@ -97,26 +113,18 @@ namespace AOEClient
 
             return true;
         }
-
-        public static IEnumerable<TSource> ForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
-        {
-            var lsource = source as TSource[] ?? source.ToArray();
-            foreach (TSource item in lsource)
-                action(item);
-            return lsource;
-        }
-       
+        
         static void SendMessages(IntPtr hwnd, string phrase, short supplyAmount = 1)
         {
             if (string.IsNullOrEmpty(phrase) || supplyAmount <= 0)
                 return;
 
-            ShowWindow(hwnd, 1);
+            ShowWindow(hwnd);
 
             var key = new InputSimulator();
             for (short i = 0; i < supplyAmount; i++)
             {
-                ShowWindow(hwnd, 5);
+                ShowWindow(hwnd);
 
                 key.Keyboard.KeyPress(VirtualKeyCode.RETURN);
                 key.Keyboard.Sleep(100);
@@ -128,5 +136,15 @@ namespace AOEClient
                 key.Keyboard.Sleep(30);
             }
         }
+
+        #region Helper LINQ method
+        public static IEnumerable<TSource> ForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
+        {
+            var lsource = source as TSource[] ?? source.ToArray();
+            foreach (TSource item in lsource)
+                action(item);
+            return lsource;
+        } 
+        #endregion
     }
 }
